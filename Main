@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Body Mass Index Calculator</title>
+    </head>
+    <body style="text-align:center;">
+        
+        <form>
+            <p><b>Body Mass Index</b></p>
+            Height(m): <input type="text" name="height" id="height">
+            <br><br>
+            Weight(kg): <input type="text" name="weight" id="weight">
+            <br><br>
+            <input type="button" onclick="" value="Calculate">
+            <br><br>
+            BMI Category: <span id="cat"></span>
+            <br><br>
+            BMI Range (kg/m<sup>2</sup>): <span id="range"></span>
+            <br><br>
+            Health Risk: <span id="risk"></span>
+        </form>
+        <br><br>
+        <a href="about_us.html">About Us</a>
+    </body>
+</html>
