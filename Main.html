@@ -64,7 +64,7 @@
             var Bmi ;
              
             Bmi = weight / (height * height);
-            document.getElementById("range").innerHTML = Bmi;
+            document.getElementById("range").innerHTML = Bmi.toFixed(2);
             if( Bmi <=0 && Bmi == 18.4 ){
             document.getElementById("cat").innerHTML = "Underweight";
             document.getElementById("risk").innerHTML = "Malnutrition risk";
