@@ -2,39 +2,110 @@
 <html>
     <head>
         <title>About Us</title>
-        <style>
-            body{
-                background-color: #FDC094; /* For browsers that do not support gradients */
-                background-image: linear-gradient(to left, #0B0742 , #FDC094);
-            }
-            table{
-                margin:auto;
-                width: 70%;
-            }
-            th, td{
-                border-bottom: 1px solid #ddd;
-            }
-            th{
-                background-color: violet;
-                color:black;
-            }
-            td{
-                background-color:aquamarine;
-                color: black;
-                text-align: center;
-            }
-        </style>
+		<style>
+			html {
+				box-sizing: border-box;
+			}
+			
+			body{
+				background-image: url('back.jfif');
+			}
+
+			*, *:before, *:after {
+				box-sizing: inherit;
+			}
+
+			.column {
+				float: left;
+				width: 25%;
+				margin-bottom: 16px;
+				padding: 0 8px;
+			}
+
+			.card {
+				box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+				margin: 8px;
+			}
+
+			.container {
+				padding: 0 16px;
+			}
+
+			.container::after, .row::after {
+				content: "";
+				clear: both;
+				display: table;
+			}
+
+			.id {
+				color: #404040;
+			}
+			
+			img{
+				width: 100%
+			}
+
+			@media screen and (max-width: 650px) {
+				.column {
+					width: 100%;
+					display: block;
+				}
+			}
+	</style>
     </head>
     <body>
         <h3>About Us</h3>
         <H4>Developer Details</H4>
-        <table>
+        <table border="1">
             <tr><th>Name</th><th>Student ID</th></tr>
             <tr><td>Juan Safuan Bin Idris</t><td>2020461282</td></tr>
             <tr><td>Muhammad Hazim Bin Ahmad Suhairi</td><td>2020898408</td></tr>
             <tr><td>Wan Izzat Yusry B. Wan Yusoff</td><td>2020476464</td></tr>
             <tr><td>Lukhman Bin Abdul Rahim</td><td>2020834578</td></tr>
         </table>
+		
+		<div class="row">
+			<div class="column">
+				<div class="card">
+					<img src="test.jpg">
+					<div class="container">
+						<h3>Juan Safuan Bin Idris</h3>
+						<p class="id">2020461282</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="test.jpg">
+					<div class="container">
+						<h3>Muhammad Hazim Bin Ahmad Suhairi</h3>
+						<p class="id">2020898408</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="test.jpg">
+					<div class="container">
+						<h3>Wan Izzat Yusry B. Wan Yusoff</h3>
+						<p class="id">2020476464</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="column">
+				<div class="card">
+					<img src="test.jpg">
+					<div class="container">
+						<h3>Lukhman Bin Abdul Rahim</h3>
+						<p class="id">2020834578</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
         <br><br>
         <h4>Information</h4>
         <p>This web application is created as a group assignment for ITT588, Front-End Technology.</p>
