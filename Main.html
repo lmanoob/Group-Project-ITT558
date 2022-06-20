@@ -45,7 +45,7 @@
             <br><br>
             Weight(kg): <input type="text" name="weight" id="weight">
             <br><br>
-            <input type="button" onclick="" value="Calculate">
+            <button type="button" onclick="BMI()">Calculate</button>
             <br><br>
             BMI Category: <span id="cat"></span>
             <br><br>
@@ -56,5 +56,40 @@
         <br><br>
         <a href="about_us.html">About Us</a>
         </div>
+	    
+	     <script>
+            function BMI(){	
+            var height = document.getElementById("height").value;   
+            var weight = document.getElementById("weight").value;
+            var Bmi ;
+             
+            Bmi = weight / (height * height);
+            document.getElementById("range").innerHTML = Bmi;
+            if( Bmi <=0 && Bmi == 18.4 ){
+            document.getElementById("cat").innerHTML = "Underweight";
+            document.getElementById("risk").innerHTML = "Malnutrition risk";
+        }
+        if (Bmi == 18.5 && Bmi <= 24.9){
+            document.getElementById("cat").innerHTML = "Normal Weight";
+            document.getElementById("risk").innerHTML = "Low risk";
+        }
+        if(Bmi == 25 && Bmi <= 29.9){
+            document.getElementById("cat").innerHTML = "Overweight";
+            document.getElementById("risk").innerHTML = "Enchanced risk";
+        }
+        if(Bmi == 30 && Bmi <= 34.9){
+            document.getElementById("cat").innerHTML = "Moderately obese";
+            document.getElementById("risk").innerHTML = "Medium risk";
+        }
+        if(Bmi == 35 && Bmi <= 39.9){
+            document.getElementById("cat").innerHTML = "Severely obese";
+            document.getElementById("risk").innerHTML = "High risk";
+        }
+        if(Bmi >= 40 ){
+            document.getElementById("cat").innerHTML = "Very severly obese";
+            document.getElementById("risk").innerHTML = "Very high risk";
+        }
+        }
+        </script>
     </body>
 </html>
