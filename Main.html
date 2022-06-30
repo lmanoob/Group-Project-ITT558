@@ -46,6 +46,7 @@
             Weight(kg): <input type="text" name="weight" id="weight">
             <br><br>
             <button type="button" onclick="BMI()">Calculate</button>
+	    <button type="reset" onclick="clean()">Clear</button>
             <br><br>
             BMI Category: <span id="cat"></span>
             <br><br>
@@ -57,7 +58,12 @@
         <a href="about_us.html">About Us</a>
         </div>
 	    
-	     <script>
+	    <script>
+	    function clean(){
+            document.getElementById("range").innerHTML = "";
+            document.getElementById("cat").innerHTML = "";
+            document.getElementById("risk").innerHTML = "";
+            }
             function BMI(){	
             var height = document.getElementById("height").value;   
             var weight = document.getElementById("weight").value;
