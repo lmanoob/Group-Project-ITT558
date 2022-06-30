@@ -96,6 +96,26 @@
             document.getElementById("cat").innerHTML = "Very severly obese";
             document.getElementById("risk").innerHTML = "Very high risk";
         }
+	 if (height==null || height=="")
+		{
+		    alert("please insert your height");
+			return false;
+		}
+        else if(isNaN(height))
+		{
+		   alert("please insert numerical value");
+		   return false;
+		}
+        if (weight==null || weight=="")
+		{
+		    alert("please insert your weight");
+			return false;
+		}
+        else if(isNaN(weight))
+		{
+		   alert("please insert numerical value");
+		   return false;
+		}	    
         }
         </script>
     </body>
